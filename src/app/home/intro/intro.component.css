@@ -1,0 +1,35 @@
+.home-intro {
+  width: 100%;
+  position: relative;
+  height: 700px;
+}
+
+.intro-banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.intro-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+
+.gradient-top {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 30%;
+}
+
+.gradient-bottom {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  width: 100%;
+  height: 30%;
+}
