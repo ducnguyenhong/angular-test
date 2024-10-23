@@ -1,0 +1,27 @@
+<button
+  type="button"
+  *ngIf="!href"
+  [ngClass]="[
+    'flex justify-center items-center duration-200 text-[15px] rounded-lg px-4 py-2',
+    getBgColor(),
+    buttonClass
+  ]"
+  (click)="(onClick)"
+>
+  <i *ngIf="!!icon" [ngClass]="[icon, 'mr-2']"></i>
+  {{ title }}
+</button>
+
+<a
+  *ngIf="!!href"
+  [routerLink]="href"
+  [ngClass]="[
+    'flex justify-center items-center duration-200 text-[15px] rounded-lg px-4 py-2',
+    getBgColor(),
+    buttonClass
+  ]"
+  (click)="(onClick)"
+>
+  <i *ngIf="!!icon" [ngClass]="[icon, 'mr-2']"></i>
+  {{ title }}
+</a>

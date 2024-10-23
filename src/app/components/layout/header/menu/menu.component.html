@@ -1,7 +1,5 @@
-<div>
-  <ul class="list-item">
-    <li *ngFor="let item of menuList">
-      <a [routerLink]="item.link">{{ item.title }}</a>
-    </li>
-  </ul>
-</div>
+<ul class="flex items-center gap-14 justify-center">
+  <li *ngFor="let item of menuList">
+    <a [routerLink]="item.link" class="text-white text-[16px] font-medium">{{ item.title }}</a>
+  </li>
+</ul>

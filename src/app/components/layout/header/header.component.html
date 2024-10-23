@@ -1,11 +1,20 @@
-<header class="header">
-  <div class="header-item">
-    logo
+<header class="flex justify-between items-center h-[75px] px-10 bg-transparent fixed top-0 left-0 w-full z-50">
+  <div class="flex items-center gap-2 w-[300px]">
+    <img src="/images/logo.png" alt="logo" class="w-8 h-8" />
+    <p class="text-white font-semibold text-[18px]">Movie Plus</p>
   </div>
 
-  <div class="header-item">
-    <app-header-menu/>
+  <div class="flex flex-1 justify-center">
+    <app-header-menu />
   </div>
 
-  <div class="header-item">login</div>
+  <div class="w-[300px] flex items-center gap-4">
+    <button type="button" class="mr-3">
+      <i class="pi pi-search text-white text-[15px]"></i>
+    </button>
+
+    <app-button title="Đăng ký" href="/dang-ky" [isTransparent]="true" class="w-[118px]"></app-button>
+
+    <app-button title="Đăng nhập" href="/dang-nhap" class="w-[118px]"></app-button>
+  </div>
 </header>

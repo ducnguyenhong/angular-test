@@ -1,21 +1,39 @@
-<div class="home-intro">
-  <div class="gradient-top"></div>
-  <img
-    class="intro-banner"
-    src="https://knightedgemedia.com/wp-content/uploads/2024/05/annatar-sauron-charlie-vickers-rings-of-power-banner.jpg"
-    alt="banner"
-  />
-  <div class="intro-content">
-    <h1>The Rings Of Power</h1>
-    <p>22/10/2024</p>
-    <p>
-      The epic tale of J.R.R. Tolkien's Middle-earth, set against the backdrop of the ancient world. The epic tale of
-      J.R.R. Tolkien's Middle-earth, set against the backdrop of the ancient world.
-    </p>
-    <div>
-      <button mat-flat-button>Watch Trailer</button>
-      <button mat-stroked-button>Add Watchlist</button>
-    </div>
-  </div>
-  <div class="gradient-bottom"></div>
+<div class="w-full relative h-[750px]">
+  <div class="absolute top-0 left-0 z-20 w-full h-[40%] bg-gradient-to-b from-black to-transparent"></div>
+  <p-carousel
+    [showNavigators]="false"
+    [value]="movies"
+    [numVisible]="1"
+    [numScroll]="1"
+    [circular]="true"
+    [responsiveOptions]="responsiveOptions"
+    autoplayInterval="5000000"
+  >
+    <ng-template let-movie pTemplate="item">
+      <div>
+        <div class="relative mx-auto">
+          <img src="{{ cdnTmdb }}/{{ movie.backdrop_path }}" [alt]="movie.name" class="w-full h-[750px] object-cover" />
+
+          <div class="absolute top-[30%] left-20 z-30 w-[500px] flex flex-col gap-4">
+            <p class="text-white font-bold text-[30px]">{{ movie.title }}</p>
+            <p class="text-[13px] text-[#828282]">{{ movie.release_date }}</p>
+            <p class="text-white text-[15px] line-clamp-3">
+              {{ movie.overview }}
+            </p>
+            <div class="flex items-center gap-3 mt-4">
+              <app-button title="Xem ngay" href="/dang-nhap" class="w-[168px]" icon="pi pi-play-circle"></app-button>
+              <app-button
+                title="Lưu lại"
+                href="/dang-nhap"
+                [isTransparent]="true"
+                class="w-[168px]"
+                icon="pi pi-bookmark"
+              ></app-button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+  <div class="absolute bottom-0 z-20 left-0 w-full h-[30%] bg-gradient-to-t from-black to-transparent"></div>
 </div>
